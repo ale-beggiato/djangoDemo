@@ -1,0 +1,5 @@
+<h1>{{ choice.question.question_text }}</h1>
+<p>
+    Thank you for answering {{choice.choice_text}}
+</p>
+<a href="{%url 'polls:results' choice.question.id%}">Go to results</a>
