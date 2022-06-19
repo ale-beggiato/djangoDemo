@@ -10,7 +10,7 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
     def recent(self):
-        return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(hours=1)
+        return timezone.now() >= self.pub_date >= timezone.now() - datetime.timedelta(hours=24)
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
